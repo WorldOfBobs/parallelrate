@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-03-21T14:56:25Z",
+  "updated_at": "2026-03-21T14:56:55Z",
   "rates": {
     "USD_NGN": {
       "foreign": "USD",
@@ -8,76 +8,11 @@
       "country": "Nigeria",
       "sym": "\u20a6",
       "parallel_label": "Parallel market",
-      "parallel_rate": 1387.45,
+      "parallel_rate": 1387.11,
       "cbn_rate": 1356.86,
-      "spread": 30.59,
-      "spread_pct": 2.25,
-      "fetched_at": "2026-03-21 14:28"
-    },
-    "GBP_NGN": {
-      "foreign": "GBP",
-      "local": "NGN",
-      "flag": "\ud83c\uddf3\ud83c\uddec",
-      "country": "Nigeria",
-      "sym": "\u20a6",
-      "parallel_label": "Parallel market",
-      "parallel_rate": 1844.99,
-      "cbn_rate": 1801.96,
-      "spread": 43.03,
-      "spread_pct": 2.39,
-      "fetched_at": "2026-03-21 14:28"
-    },
-    "EUR_NGN": {
-      "foreign": "EUR",
-      "local": "NGN",
-      "flag": "\ud83c\uddf3\ud83c\uddec",
-      "country": "Nigeria",
-      "sym": "\u20a6",
-      "parallel_label": "Parallel market",
-      "parallel_rate": 1600.19,
-      "cbn_rate": 1556.8,
-      "spread": 43.39,
-      "spread_pct": 2.79,
-      "fetched_at": "2026-03-21 14:28"
-    },
-    "USD_GHS": {
-      "foreign": "USD",
-      "local": "GHS",
-      "flag": "\ud83c\uddec\ud83c\udded",
-      "country": "Ghana",
-      "sym": "GH\u20b5",
-      "parallel_label": "Street/Market",
-      "parallel_rate": 11.24,
-      "cbn_rate": 10.96,
-      "spread": 0.28,
-      "spread_pct": 2.55,
-      "fetched_at": "2026-03-21 14:29"
-    },
-    "USD_KES": {
-      "foreign": "USD",
-      "local": "KES",
-      "flag": "\ud83c\uddf0\ud83c\uddea",
-      "country": "Kenya",
-      "sym": "KSh",
-      "parallel_label": "Market rate",
-      "parallel_rate": 129.64,
-      "cbn_rate": 129.5,
-      "spread": 0.14,
-      "spread_pct": 0.11,
-      "fetched_at": "2026-03-21 14:29"
-    },
-    "USD_ZAR": {
-      "foreign": "USD",
-      "local": "ZAR",
-      "flag": "\ud83c\uddff\ud83c\udde6",
-      "country": "South Africa",
-      "sym": "R",
-      "parallel_label": "Market rate",
-      "parallel_rate": 18.03,
-      "cbn_rate": 17.0,
-      "spread": 1.03,
-      "spread_pct": 6.06,
-      "fetched_at": "2026-03-21 14:29"
+      "spread": 30.25,
+      "spread_pct": 2.23,
+      "fetched_at": "2026-03-21 14:56"
     }
   }
 }
