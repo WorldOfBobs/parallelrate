@@ -3,9 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ParallelRate — Nigeria's Live Parallel Exchange Rate</title>
-<meta name="description" content="Track the live USD/NGN parallel market rate, GBP/NGN, EUR/NGN and more. Free Telegram bot with real-time alerts for Nigeria, Ghana, Kenya and South Africa.">
-<meta name="keywords" content="Nigeria parallel rate, dollar to naira today, naira black market rate, USD NGN parallel market, naira exchange rate, aboki rate, parallel rate Nigeria 2026">
+<title>Aboki Rate Today — Nigeria Parallel Rate | Dollar to Naira 2026</title>
+<meta name="description" content="Live aboki rate today: USD/NGN parallel market rate, GBP to naira, EUR to naira. Dollar to naira black market rate updated every 15 minutes. Free Telegram alerts.">
+<meta name="keywords" content="aboki rate today, dollar to naira today, naira parallel rate, naira black market rate, USD NGN parallel market, GBP to naira, EUR to naira, naira exchange rate today, aboki fx rate, Nigeria parallel rate 2026">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://parallelrate.com/">
 <meta property="og:title" content="ParallelRate — Nigeria's Live Parallel Exchange Rate">
@@ -156,9 +156,9 @@
 
 <!-- Hero -->
 <div class="hero">
-  <div class="hero-badge">🟢 Live rates updated every 15 minutes</div>
-  <h1>Nigeria's <em>Parallel Rate</em>,<br>tracked in real time</h1>
-  <p>Live USD/NGN, GBP/NGN, EUR/NGN parallel market rates — plus Ghana, Kenya & South Africa. Free Telegram bot with instant alerts.</p>
+  <div class="hero-badge" id="hero-badge">🟢 Rates updated every 15 minutes</div>
+  <h1>Aboki Rate Today —<br><em>Nigeria's Parallel Rate</em></h1>
+  <p>Live dollar to naira black market rate, GBP/NGN, EUR/NGN. The real aboki FX rate — sourced from Bybit P2P, Wise & market data. Free Telegram alerts.</p>
   <div class="hero-btns">
     <a href="https://t.me/FXbob_bot" target="_blank" rel="noopener" class="btn-primary">📲 Get live rates on Telegram</a>
     <a href="#send-money" class="btn-secondary">💸 Send money</a>
@@ -184,53 +184,57 @@
   </div>
 </div>
 
+<!-- Rate calculator -->
+<div class="section" style="padding-bottom:0">
+  <div class="section-title">💰 Naira Calculator</div>
+  <div class="section-sub">How much naira will you get? Uses the live aboki rate.</div>
+  <div style="background:var(--bg3);border:1px solid var(--border);border-radius:14px;padding:24px;max-width:480px;margin:0 auto">
+    <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-bottom:16px">
+      <div style="flex:1;min-width:100px">
+        <div style="font-size:.72rem;color:var(--muted);margin-bottom:4px">Amount</div>
+        <input id="calc-amount" type="number" value="100" min="1"
+          style="width:100%;background:#111;border:1px solid var(--border);color:#fff;padding:10px 14px;border-radius:8px;font-size:1.1rem;font-weight:600">
+      </div>
+      <div style="flex:1;min-width:100px">
+        <div style="font-size:.72rem;color:var(--muted);margin-bottom:4px">Currency</div>
+        <select id="calc-currency"
+          style="width:100%;background:#111;border:1px solid var(--border);color:#fff;padding:10px 14px;border-radius:8px;font-size:.95rem">
+          <option value="USD">🇺🇸 USD</option>
+          <option value="GBP">🇬🇧 GBP</option>
+          <option value="EUR">🇪🇺 EUR</option>
+        </select>
+      </div>
+      <div style="flex:1;min-width:100px">
+        <div style="font-size:.72rem;color:var(--muted);margin-bottom:4px">Rate type</div>
+        <select id="calc-type"
+          style="width:100%;background:#111;border:1px solid var(--border);color:#fff;padding:10px 14px;border-radius:8px;font-size:.95rem">
+          <option value="parallel">Parallel (aboki)</option>
+          <option value="official">CBN Official</option>
+        </select>
+      </div>
+    </div>
+    <div style="text-align:center;padding:16px;background:#111;border-radius:10px;margin-bottom:16px">
+      <div style="font-size:.75rem;color:var(--muted);margin-bottom:4px" id="calc-label">You get (parallel rate)</div>
+      <div style="font-size:2.2rem;font-weight:800;color:var(--green)" id="calc-result">—</div>
+      <div style="font-size:.75rem;color:var(--dim);margin-top:4px" id="calc-rate-used"></div>
+    </div>
+    <a id="calc-wise-btn" href="https://wise.com" target="_blank" rel="noopener"
+      style="display:block;text-align:center;background:var(--green);color:#000;padding:11px;border-radius:10px;font-weight:700;font-size:.9rem;text-decoration:none">
+      💚 Send this amount with Wise →
+    </a>
+    <p style="font-size:.7rem;color:var(--dim);text-align:center;margin-top:8px">Rate is indicative. Wise/Remitly may offer different rates.</p>
+  </div>
+</div>
+
 <!-- Rate cards -->
 <div class="section">
-  <div class="section-title">Live rates</div>
-  <div class="section-sub">Parallel market · Updated every 15 min · Check bot for exact current rate</div>
-  <div class="rate-grid">
-    <div class="rate-card ng featured">
-      <div class="card-flag">🇳🇬</div>
-      <div class="card-country">Nigeria</div>
-      <div class="card-pair">USD / NGN</div>
-      <div class="card-rate-label">Parallel market</div>
-      <div class="card-rate">₦1,620</div>
-      <div class="card-official">CBN official: ₦1,590</div>
-      <span class="card-spread spread-mid">Spread ~1.9%</span>
-      <a href="https://t.me/FXbob_bot" target="_blank" rel="noopener" class="card-cta">📲 Live rate on Telegram</a>
-    </div>
-    <div class="rate-card gh">
-      <div class="card-flag">🇬🇭</div>
-      <div class="card-country">Ghana</div>
-      <div class="card-pair">USD / GHS</div>
-      <div class="card-rate-label">Street/Market</div>
-      <div class="card-rate">GH₵14.8</div>
-      <div class="card-official">Official: GH₵13.9</div>
-      <span class="card-spread spread-mid">Spread ~6%</span>
-      <a href="https://t.me/FXbob_bot" target="_blank" rel="noopener" class="card-cta">📲 Live rate on Telegram</a>
-    </div>
-    <div class="rate-card ke">
-      <div class="card-flag">🇰🇪</div>
-      <div class="card-country">Kenya</div>
-      <div class="card-pair">USD / KES</div>
-      <div class="card-rate-label">Market rate</div>
-      <div class="card-rate">KSh129</div>
-      <div class="card-official">Official: KSh129</div>
-      <span class="card-spread spread-low">Spread ~0.5%</span>
-      <a href="https://t.me/FXbob_bot" target="_blank" rel="noopener" class="card-cta">📲 Live rate on Telegram</a>
-    </div>
-    <div class="rate-card za">
-      <div class="card-flag">🇿🇦</div>
-      <div class="card-country">South Africa</div>
-      <div class="card-pair">USD / ZAR</div>
-      <div class="card-rate-label">Market rate</div>
-      <div class="card-rate">R18.4</div>
-      <div class="card-official">Official: R18.3</div>
-      <span class="card-spread spread-low">Spread ~0.5%</span>
-      <a href="https://t.me/FXbob_bot" target="_blank" rel="noopener" class="card-cta">📲 Live rate on Telegram</a>
-    </div>
+  <div class="section-title">Live aboki rates</div>
+  <div class="section-sub">Parallel market · Updated every 15 min · <span id="last-updated" style="color:var(--green)">Loading...</span></div>
+  <div class="rate-grid" id="rate-grid">
+    <!-- Populated by JS from rates.json -->
+    <div style="grid-column:1/-1;text-align:center;padding:30px;color:var(--muted);font-size:.9rem">⏳ Loading live rates...</div>
   </div>
-  <p style="font-size:.72rem;color:var(--dim);margin-top:14px;text-align:center">Rates shown are indicative. Open the bot for the current live rate from multiple sources.</p>
+  <p style="font-size:.72rem;color:var(--dim);margin-top:14px;text-align:center">Rates are indicative parallel/market rates. Open the bot for multi-source live data.</p>
 </div>
 
 <!-- Send money -->
@@ -377,9 +381,128 @@ const AFFILIATE = {
   remitly: '', // e.g. 'https://www.remitly.com/?utm_...'
 };
 (function() {
-  if (AFFILIATE.wise)    document.getElementById('wise-btn').href    = AFFILIATE.wise;
+  if (AFFILIATE.wise) {
+    document.getElementById('wise-btn').href     = AFFILIATE.wise;
+    document.getElementById('calc-wise-btn').href = AFFILIATE.wise;
+  }
   if (AFFILIATE.remitly) document.getElementById('remitly-btn').href = AFFILIATE.remitly;
 })();
+
+// ══════════════════════════════════════════════
+// LIVE RATES — fetched from rates.json
+// ══════════════════════════════════════════════
+const PAIR_CSS = { NGN:'ng', GHS:'gh', KES:'ke', ZAR:'za' };
+let liveRates = {};
+
+function fmt(n, sym) {
+  if (!n) return '—';
+  return sym + n.toLocaleString('en', {minimumFractionDigits:0, maximumFractionDigits:0});
+}
+function timeAgo(isoStr) {
+  if (!isoStr) return '';
+  const diff = Math.floor((Date.now() - new Date(isoStr+'Z')) / 60000);
+  if (diff < 2) return 'just now';
+  if (diff < 60) return `${diff} min ago`;
+  return `${Math.floor(diff/60)}h ago`;
+}
+function spreadClass(pct) {
+  return pct < 3 ? 'spread-low' : pct < 10 ? 'spread-mid' : 'spread-high';
+}
+
+function renderCards(rates) {
+  const grid = document.getElementById('rate-grid');
+  if (!Object.keys(rates).length) {
+    grid.innerHTML = '<div style="grid-column:1/-1;text-align:center;padding:30px;color:var(--muted)">Rate data unavailable — <a href="https://t.me/FXbob_bot" style="color:var(--green)">check bot for live rate</a></div>';
+    return;
+  }
+  const ORDER = ['USD_NGN','GBP_NGN','EUR_NGN','USD_GHS','USD_KES','USD_ZAR'];
+  const html = ORDER.map(key => {
+    const r = rates[key];
+    if (!r) return '';
+    const css = PAIR_CSS[r.local] || '';
+    const featured = key === 'USD_NGN' ? ' featured' : '';
+    const sc = spreadClass(r.spread_pct);
+    return `<div class="rate-card ${css}${featured}">
+      <div class="card-flag">${r.flag}</div>
+      <div class="card-country">${r.country}</div>
+      <div class="card-pair">${r.foreign} / ${r.local}</div>
+      <div class="card-rate-label">${r.parallel_label}</div>
+      <div class="card-rate">${fmt(r.parallel_rate, r.sym)}</div>
+      <div class="card-official">CBN/Official: ${fmt(r.cbn_rate, r.sym)}</div>
+      <span class="card-spread ${sc}">Spread ${r.spread_pct.toFixed(1)}%</span>
+      <a href="https://t.me/FXbob_bot" target="_blank" rel="noopener" class="card-cta">📲 Live rate on Telegram</a>
+    </div>`;
+  }).join('');
+  grid.innerHTML = html;
+}
+
+function updateTicker(rates) {
+  // Update first ticker item if USD/NGN is live
+  const r = rates['USD_NGN'];
+  if (!r) return;
+  document.querySelectorAll('.tick-item').forEach(el => {
+    const pair = el.querySelector('.tick-pair')?.textContent;
+    const rateEl = el.querySelector('.tick-rate');
+    if (!rateEl) return;
+    if (pair === 'USD/NGN Parallel') rateEl.textContent = fmt(r.parallel_rate, r.sym);
+    if (pair === 'GBP/NGN') { const g = rates['GBP_NGN']; if(g) rateEl.textContent = fmt(g.parallel_rate, g.sym); }
+    if (pair === 'EUR/NGN') { const e = rates['EUR_NGN']; if(e) rateEl.textContent = fmt(e.parallel_rate, e.sym); }
+    if (pair === 'USD/GHS') { const h = rates['USD_GHS']; if(h) rateEl.textContent = fmt(h.parallel_rate, h.sym); }
+    if (pair === 'USD/KES') { const k = rates['USD_KES']; if(k) rateEl.textContent = fmt(k.parallel_rate, k.sym); }
+    if (pair === 'USD/ZAR') { const z = rates['USD_ZAR']; if(z) rateEl.textContent = fmt(z.parallel_rate, z.sym); }
+  });
+}
+
+function updateCalculator() {
+  const amt = parseFloat(document.getElementById('calc-amount').value) || 0;
+  const cur  = document.getElementById('calc-currency').value;
+  const type = document.getElementById('calc-type').value;
+  const key  = `${cur}_NGN`;
+  const r    = liveRates[key];
+  const resultEl = document.getElementById('calc-result');
+  const labelEl  = document.getElementById('calc-label');
+  const rateEl   = document.getElementById('calc-rate-used');
+  if (!r || !amt) { resultEl.textContent = '—'; return; }
+  const rate = type === 'parallel' ? r.parallel_rate : r.cbn_rate;
+  const naira = amt * rate;
+  resultEl.textContent = '₦' + naira.toLocaleString('en', {maximumFractionDigits:0});
+  labelEl.textContent  = `You get (${type === 'parallel' ? 'aboki/parallel' : 'CBN official'} rate)`;
+  rateEl.textContent   = `Rate used: 1 ${cur} = ₦${rate?.toLocaleString('en', {maximumFractionDigits:0})}`;
+}
+
+async function loadRates() {
+  try {
+    const res = await fetch('/rates.json?t=' + Date.now());
+    if (!res.ok) throw new Error('no rates.json');
+    const data = await res.json();
+    liveRates = data.rates || {};
+    renderCards(liveRates);
+    updateTicker(liveRates);
+    updateCalculator();
+    // Last updated
+    const ago = timeAgo(data.updated_at);
+    const badge = document.getElementById('hero-badge');
+    if (badge) badge.textContent = `🟢 Rates updated ${ago}`;
+    const lu = document.getElementById('last-updated');
+    if (lu) lu.textContent = `Last updated ${ago}`;
+  } catch(e) {
+    // Fall back to static display — cards already show placeholder
+    console.warn('rates.json unavailable:', e.message);
+    document.getElementById('rate-grid').innerHTML =
+      '<div style="grid-column:1/-1;text-align:center;padding:30px;color:var(--muted)">Live data temporarily unavailable — <a href="https://t.me/FXbob_bot" style="color:var(--green)">check bot for real-time rate →</a></div>';
+    const lu = document.getElementById('last-updated');
+    if (lu) { lu.textContent = 'check bot for live rate'; lu.style.color = 'var(--muted)'; }
+  }
+}
+
+// Calculator events
+['calc-amount','calc-currency','calc-type'].forEach(id =>
+  document.getElementById(id)?.addEventListener('input', updateCalculator)
+);
+
+// Load on page open, refresh every 5 min
+loadRates();
+setInterval(loadRates, 5 * 60 * 1000);
 </script>
 
 </body>
