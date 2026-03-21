@@ -39,10 +39,14 @@
   body{background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,sans-serif;line-height:1.5}
 
   /* ── Nav ── */
-  nav{display:flex;justify-content:space-between;align-items:center;padding:16px 24px;border-bottom:1px solid var(--border);position:sticky;top:0;background:rgba(10,10,20,.95);backdrop-filter:blur(8px);z-index:100}
-  .logo{font-size:1.1rem;font-weight:700;color:#fff;text-decoration:none}
+  nav{display:flex;justify-content:space-between;align-items:center;padding:14px 20px;border-bottom:1px solid var(--border);position:sticky;top:0;background:rgba(10,10,20,.95);backdrop-filter:blur(8px);z-index:100;gap:12px}
+  .logo{font-size:1.1rem;font-weight:700;color:#fff;text-decoration:none;flex-shrink:0}
   .logo span{color:var(--green)}
-  .nav-cta{background:var(--green);color:#000;padding:7px 16px;border-radius:20px;font-size:.82rem;font-weight:700;text-decoration:none}
+  .nav-links{display:flex;align-items:center;gap:12px;flex-wrap:nowrap;overflow:hidden}
+  .nav-link{color:var(--muted);font-size:.8rem;text-decoration:none;white-space:nowrap}
+  .nav-link:hover{color:#fff}
+  .nav-cta{background:var(--green);color:#000;padding:7px 14px;border-radius:20px;font-size:.8rem;font-weight:700;text-decoration:none;white-space:nowrap;flex-shrink:0}
+  @media(max-width:480px){.nav-link{display:none}}
 
   /* ── Hero ── */
   .hero{text-align:center;padding:64px 24px 48px;max-width:700px;margin:0 auto}
@@ -151,10 +155,10 @@
 <!-- Nav -->
 <nav>
   <a href="/" class="logo">Parallel<span>Rate</span></a>
-  <div style="display:flex;gap:14px;align-items:center;flex-wrap:wrap">
-    <a href="/usd-naira" style="color:var(--muted);font-size:.82rem;text-decoration:none">USD/NGN</a>
-    <a href="/gbp-naira" style="color:var(--muted);font-size:.82rem;text-decoration:none">GBP/NGN</a>
-    <a href="/eur-naira" style="color:var(--muted);font-size:.82rem;text-decoration:none">EUR/NGN</a>
+  <div class="nav-links">
+    <a href="/usd-naira" class="nav-link">USD/NGN</a>
+    <a href="/gbp-naira" class="nav-link">GBP/NGN</a>
+    <a href="/eur-naira" class="nav-link">EUR/NGN</a>
     <a href="https://t.me/FXbob_bot" target="_blank" rel="noopener" class="nav-cta">📲 Alerts</a>
   </div>
 </nav>
@@ -422,7 +426,9 @@ function fmt(n, sym) {
 }
 function timeAgo(isoStr) {
   if (!isoStr) return '';
-  const diff = Math.floor((Date.now() - new Date(isoStr+'Z')) / 60000);
+  // isoStr already ends in Z from export_rates.py — don't add another Z
+  const diff = Math.floor((Date.now() - new Date(isoStr)) / 60000);
+  if (isNaN(diff) || diff < 0) return 'just now';
   if (diff < 2) return 'just now';
   if (diff < 60) return `${diff} min ago`;
   return `${Math.floor(diff/60)}h ago`;
