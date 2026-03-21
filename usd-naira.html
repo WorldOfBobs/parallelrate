@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dollar to Naira Today — Live USD/NGN Parallel Rate</title>
+<meta name="description" content="Live dollar to naira exchange rate today. USD to NGN parallel market (aboki) rate and CBN official rate, updated every 15 minutes. Free Telegram alerts.">
+<meta name="keywords" content="dollar to naira today, USD to naira, dollar naira rate, aboki dollar rate, naira exchange rate today, 1 dollar to naira, USD NGN parallel rate">
+<link rel="canonical" href="https://parallelrate.com/usd-naira">
+<meta property="og:title" content="Dollar to Naira Today — Live USD/NGN Rate">
+<meta property="og:description" content="Live USD to NGN parallel rate updated every 15 min. Aboki rate + CBN official rate.">
+<meta name="theme-color" content="#0a0a14">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💱</text></svg>">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Dollar to Naira Today","url":"https://parallelrate.com/usd-naira","description":"Live USD/NGN parallel market exchange rate updated every 15 minutes."}</script>
+<link rel="stylesheet" href="/style.css">
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  :root{--bg:#0a0a14;--bg2:#111120;--bg3:#1a1a2e;--border:#252540;--green:#00c896;--text:#e0e0e0;--muted:#888;--dim:#444}
+  body{background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,sans-serif;min-height:100vh}
+  nav{display:flex;justify-content:space-between;align-items:center;padding:16px 24px;border-bottom:1px solid var(--border);background:rgba(10,10,20,.95);position:sticky;top:0;z-index:100}
+  .logo{font-size:1.1rem;font-weight:700;color:#fff;text-decoration:none}.logo span{color:var(--green)}
+  .nav-cta{background:var(--green);color:#000;padding:7px 16px;border-radius:20px;font-size:.82rem;font-weight:700;text-decoration:none}
+  .container{max-width:700px;margin:0 auto;padding:40px 24px}
+  h1{font-size:clamp(1.6rem,5vw,2.4rem);font-weight:800;color:#fff;margin-bottom:10px}
+  .subtitle{color:var(--muted);font-size:.95rem;margin-bottom:32px}
+  .rate-hero{background:var(--bg3);border:1px solid var(--green);border-radius:16px;padding:28px;text-align:center;margin-bottom:28px}
+  .rate-label{font-size:.75rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-bottom:4px}
+  .rate-big{font-size:3rem;font-weight:800;color:var(--green);line-height:1}
+  .rate-sub{font-size:.85rem;color:var(--muted);margin-top:8px}
+  .rate-updated{font-size:.72rem;color:var(--dim);margin-top:4px}
+  .two-col{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:28px}
+  @media(max-width:500px){.two-col{grid-template-columns:1fr}}
+  .stat-box{background:var(--bg3);border:1px solid var(--border);border-radius:12px;padding:18px;text-align:center}
+  .stat-box .label{font-size:.72rem;color:var(--muted);margin-bottom:4px}
+  .stat-box .value{font-size:1.4rem;font-weight:700;color:#fff}
+  .calc-box{background:var(--bg3);border:1px solid var(--border);border-radius:14px;padding:22px;margin-bottom:28px}
+  .calc-box h2{font-size:1rem;color:#fff;margin-bottom:14px}
+  .calc-row{display:flex;gap:10px;align-items:flex-end;flex-wrap:wrap;margin-bottom:12px}
+  .calc-row input,.calc-row select{background:#111;border:1px solid var(--border);color:#fff;padding:10px 14px;border-radius:8px;font-size:1rem;flex:1;min-width:120px}
+  .calc-result{font-size:1.8rem;font-weight:700;color:var(--green);text-align:center;padding:14px;background:#111;border-radius:10px;margin-bottom:12px}
+  .btn{display:block;text-align:center;padding:11px;border-radius:10px;font-weight:700;font-size:.9rem;text-decoration:none;transition:opacity .2s}
+  .btn:hover{opacity:.85}
+  .btn-wise{background:#00b67a;color:#fff;margin-bottom:8px}
+  .btn-tg{background:#0088cc;color:#fff}
+  .faq{margin-top:32px}
+  .faq h2{font-size:1.1rem;color:#fff;margin-bottom:16px}
+  .faq details{background:var(--bg3);border:1px solid var(--border);border-radius:10px;padding:14px 18px;margin-bottom:10px}
+  .faq summary{font-size:.9rem;color:#ccc;cursor:pointer;font-weight:600}
+  .faq p{font-size:.83rem;color:var(--muted);margin-top:10px;line-height:1.6}
+  footer{text-align:center;padding:24px;color:var(--dim);font-size:.78rem;border-top:1px solid var(--border);margin-top:40px}
+  footer a{color:var(--dim);text-decoration:none}
+</style>
+</head>
+<body>
+<nav>
+  <a href="/" class="logo">Parallel<span>Rate</span></a>
+  <a href="https://t.me/FXbob_bot" target="_blank" rel="noopener" class="nav-cta">📲 Get alerts</a>
+</nav>
+
+<div class="container">
+  <h1>Dollar to Naira Today</h1>
+  <p class="subtitle">Live USD/NGN parallel market rate (aboki rate) + CBN official rate · Updated every 15 minutes</p>
+
+  <div class="rate-hero">
+    <div class="rate-label">USD → NGN Parallel / Aboki Rate</div>
+    <div class="rate-big" id="main-rate">Loading...</div>
+    <div class="rate-sub">CBN Official: <span id="official-rate">—</span></div>
+    <div class="rate-updated" id="rate-updated">Checking for live data...</div>
+  </div>
+
+  <div class="two-col">
+    <div class="stat-box">
+      <div class="label">Spread</div>
+      <div class="value" id="spread-val">—</div>
+    </div>
+    <div class="stat-box">
+      <div class="label">Spread %</div>
+      <div class="value" id="spread-pct">—</div>
+    </div>
+  </div>
+
+  <div class="calc-box">
+    <h2>💰 Dollar to Naira Calculator</h2>
+    <div class="calc-row">
+      <input type="number" id="usd-amount" value="100" min="1" placeholder="USD amount">
+      <select id="rate-type">
+        <option value="parallel">Aboki / Parallel rate</option>
+        <option value="official">CBN Official rate</option>
+      </select>
+    </div>
+    <div class="calc-result" id="calc-output">₦—</div>
+    <a id="wise-link" href="https://wise.com" target="_blank" rel="noopener" class="btn btn-wise">💚 Send dollars with Wise →</a>
+    <a href="https://t.me/FXbob_bot" target="_blank" rel="noopener" class="btn btn-tg">📲 Get live alerts on Telegram</a>
+  </div>
+
+  <div class="faq">
+    <h2>Frequently Asked Questions</h2>
+    <details>
+      <summary>What is the dollar to naira parallel rate?</summary>
+      <p>The parallel rate (also called the "aboki rate" or black market rate) is the unofficial exchange rate at which dollars are traded outside the official banking system in Nigeria. It is typically higher than the CBN official rate due to dollar scarcity and demand from businesses and individuals who cannot access official channels.</p>
+    </details>
+    <details>
+      <summary>What is the aboki rate today?</summary>
+      <p>The aboki rate is shown above and updated every 15 minutes from multiple sources including P2P markets and FX tracking services. You can also get the live aboki rate anytime on Telegram via <a href="https://t.me/FXbob_bot" style="color:var(--green)">@FXbob_bot</a>.</p>
+    </details>
+    <details>
+      <summary>What is the CBN official dollar rate?</summary>
+      <p>The Central Bank of Nigeria (CBN) sets an official exchange rate used by banks and official transactions. This is typically lower than the parallel/aboki rate. Both rates are shown above.</p>
+    </details>
+    <details>
+      <summary>How do I send dollars to Nigeria at the best rate?</summary>
+      <p>Services like Wise and Remitly often offer rates close to or better than the CBN official rate, with low transparent fees. Check the rate above first, then compare with remittance services before sending.</p>
+    </details>
+  </div>
+</div>
+
+<footer>
+  <a href="/">ParallelRate.com</a> · <a href="/gbp-naira">GBP/NGN</a> · <a href="/eur-naira">EUR/NGN</a> · <a href="/#privacy">Privacy</a><br>
+  Rates indicative only. Not financial advice. © 2026 ParallelRate
+</footer>
+
+<script>
+const AFFILIATE_WISE = '';
+async function load() {
+  try {
+    const res = await fetch('/rates.json?t='+Date.now());
+    const data = await res.json();
+    const r = data.rates?.USD_NGN;
+    if (!r) return;
+    document.getElementById('main-rate').textContent = '₦' + r.parallel_rate.toLocaleString('en',{maximumFractionDigits:0});
+    document.getElementById('official-rate').textContent = '₦' + r.cbn_rate.toLocaleString('en',{maximumFractionDigits:0});
+    document.getElementById('spread-val').textContent = '₦' + r.spread.toLocaleString('en',{maximumFractionDigits:0});
+    document.getElementById('spread-pct').textContent = r.spread_pct.toFixed(2) + '%';
+    const diff = Math.floor((Date.now()-new Date(data.updated_at))/60000);
+    document.getElementById('rate-updated').textContent = `Updated ${diff < 2 ? 'just now' : diff + ' min ago'}`;
+    window._rateData = r;
+    calc();
+    if (AFFILIATE_WISE) document.getElementById('wise-link').href = AFFILIATE_WISE;
+  } catch(e) {
+    document.getElementById('main-rate').textContent = '—';
+    document.getElementById('rate-updated').textContent = 'Live data unavailable — check @FXbob_bot on Telegram';
+  }
+}
+function calc() {
+  const r = window._rateData;
+  if (!r) return;
+  const amt = parseFloat(document.getElementById('usd-amount').value) || 0;
+  const type = document.getElementById('rate-type').value;
+  const rate = type === 'parallel' ? r.parallel_rate : r.cbn_rate;
+  document.getElementById('calc-output').textContent = '₦' + (amt*rate).toLocaleString('en',{maximumFractionDigits:0});
+}
+document.getElementById('usd-amount').addEventListener('input', calc);
+document.getElementById('rate-type').addEventListener('change', calc);
+load();
+setInterval(load, 5*60*1000);
+</script>
+</body>
+</html>
