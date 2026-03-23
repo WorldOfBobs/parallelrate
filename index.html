@@ -226,6 +226,15 @@
         </select>
       </div>
     </div>
+    <!-- Flip button -->
+    <div style="text-align:center;margin-bottom:12px">
+      <button id="calc-flip-btn" onclick="flipCalculator()"
+        style="background:none;border:1px solid var(--border);color:var(--muted);padding:6px 18px;border-radius:20px;font-size:.8rem;cursor:pointer;display:inline-flex;align-items:center;gap:6px;transition:border-color .2s,color .2s"
+        onmouseover="this.style.borderColor='var(--green)';this.style.color='var(--green)'"
+        onmouseout="this.style.borderColor='var(--border)';this.style.color='var(--muted)'">
+        <span style="font-size:1rem">⇅</span> <span id="calc-flip-label">NGN → Foreign</span>
+      </button>
+    </div>
     <div style="text-align:center;padding:16px;background:#111;border-radius:10px;margin-bottom:16px">
       <div style="font-size:.75rem;color:var(--muted);margin-bottom:4px" id="calc-label">You get (parallel rate)</div>
       <div style="font-size:2.2rem;font-weight:800;color:var(--green)" id="calc-result">—</div>
@@ -482,8 +491,21 @@ function updateTicker(rates) {
   });
 }
 
+// calc direction: 'foreign_to_ngn' or 'ngn_to_foreign'
+let calcDirection = 'foreign_to_ngn';
+
+function flipCalculator() {
+  calcDirection = calcDirection === 'foreign_to_ngn' ? 'ngn_to_foreign' : 'foreign_to_ngn';
+  const flipLabel = document.getElementById('calc-flip-label');
+  if (flipLabel) flipLabel.textContent = calcDirection === 'foreign_to_ngn' ? 'NGN → Foreign' : 'Foreign → NGN';
+  // Update amount placeholder hint
+  const amtInput = document.getElementById('calc-amount');
+  if (amtInput) amtInput.placeholder = calcDirection === 'ngn_to_foreign' ? '10000' : '100';
+  updateCalculator();
+}
+
 function updateCalculator() {
-  const amt = parseFloat(document.getElementById('calc-amount').value) || 0;
+  const amt  = parseFloat(document.getElementById('calc-amount').value) || 0;
   const cur  = document.getElementById('calc-currency').value;
   const type = document.getElementById('calc-type').value;
   const key  = `${cur}_NGN`;
@@ -493,10 +515,21 @@ function updateCalculator() {
   const rateEl   = document.getElementById('calc-rate-used');
   if (!r || !amt) { resultEl.textContent = '—'; return; }
   const rate = type === 'parallel' ? r.parallel_rate : r.cbn_rate;
-  const naira = amt * rate;
-  resultEl.textContent = '₦' + naira.toLocaleString('en', {maximumFractionDigits:0});
-  labelEl.textContent  = `You get (${type === 'parallel' ? 'aboki/parallel' : 'CBN official'} rate)`;
-  rateEl.textContent   = `Rate used: 1 ${cur} = ₦${rate?.toLocaleString('en', {maximumFractionDigits:0})}`;
+  const sym  = r.sym || '₦';
+
+  if (calcDirection === 'foreign_to_ngn') {
+    // e.g. 100 USD → ₦
+    const naira = amt * rate;
+    resultEl.textContent = '₦' + naira.toLocaleString('en', {maximumFractionDigits:0});
+    labelEl.textContent  = `${amt} ${cur} → NGN (${type === 'parallel' ? 'aboki/parallel' : 'CBN official'})`;
+    rateEl.textContent   = `Rate: 1 ${cur} = ₦${rate?.toLocaleString('en', {maximumFractionDigits:0})}`;
+  } else {
+    // e.g. 10000 NGN → USD
+    const foreign = amt / rate;
+    resultEl.textContent = foreign.toLocaleString('en', {minimumFractionDigits:2, maximumFractionDigits:4}) + ' ' + cur;
+    labelEl.textContent  = `${amt.toLocaleString()} NGN → ${cur} (${type === 'parallel' ? 'aboki/parallel' : 'CBN official'})`;
+    rateEl.textContent   = `Rate: ₦${rate?.toLocaleString('en', {maximumFractionDigits:0})} = 1 ${cur}`;
+  }
 }
 
 async function loadRates() {
