@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-05T10:27:51Z",
+  "updated_at": "2026-05-05T10:42:53Z",
   "rates": {
     "USD_NGN": {
       "foreign": "USD",
@@ -8,11 +8,11 @@
       "country": "Nigeria",
       "sym": "\u20a6",
       "parallel_label": "Parallel market",
-      "parallel_rate": 1363.76,
+      "parallel_rate": 1364.25,
       "cbn_rate": 1369.75,
-      "spread": -5.99,
-      "spread_pct": -0.44,
-      "fetched_at": "2026-05-05 10:27"
+      "spread": -5.5,
+      "spread_pct": -0.4,
+      "fetched_at": "2026-05-05 10:42"
     },
     "GBP_NGN": {
       "foreign": "GBP",
@@ -21,11 +21,11 @@
       "country": "Nigeria",
       "sym": "\u20a6",
       "parallel_label": "Parallel market",
-      "parallel_rate": 1838.98,
+      "parallel_rate": 1838.5,
       "cbn_rate": 1853.02,
-      "spread": -14.04,
-      "spread_pct": -0.76,
-      "fetched_at": "2026-05-05 10:27"
+      "spread": -14.52,
+      "spread_pct": -0.78,
+      "fetched_at": "2026-05-05 10:42"
     },
     "EUR_NGN": {
       "foreign": "EUR",
@@ -34,11 +34,11 @@
       "country": "Nigeria",
       "sym": "\u20a6",
       "parallel_label": "Parallel market",
-      "parallel_rate": 1587.22,
+      "parallel_rate": 1586.75,
       "cbn_rate": 1599.17,
-      "spread": -11.95,
-      "spread_pct": -0.75,
-      "fetched_at": "2026-05-05 10:27"
+      "spread": -12.42,
+      "spread_pct": -0.78,
+      "fetched_at": "2026-05-05 10:42"
     }
   }
 }
