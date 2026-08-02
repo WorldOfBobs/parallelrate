@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-02T00:52:00Z",
+  "updated_at": "2026-08-02T01:07:01Z",
   "rates": {
     "USD_NGN": {
       "foreign": "USD",
@@ -9,10 +9,10 @@
       "sym": "\u20a6",
       "parallel_label": "Parallel market",
       "parallel_rate": 1384.24,
-      "cbn_rate": 1364.06,
-      "spread": 20.18,
-      "spread_pct": 1.48,
-      "fetched_at": "2026-08-02 00:51"
+      "cbn_rate": 1363.97,
+      "spread": 20.27,
+      "spread_pct": 1.49,
+      "fetched_at": "2026-08-02 01:06"
     },
     "GBP_NGN": {
       "foreign": "GBP",
@@ -25,7 +25,7 @@
       "cbn_rate": 1824.63,
       "spread": 46.64,
       "spread_pct": 2.56,
-      "fetched_at": "2026-08-02 00:51"
+      "fetched_at": "2026-08-02 01:06"
     },
     "EUR_NGN": {
       "foreign": "EUR",
@@ -35,10 +35,10 @@
       "sym": "\u20a6",
       "parallel_label": "Parallel market",
       "parallel_rate": 1600.02,
-      "cbn_rate": 1562.3,
-      "spread": 37.72,
-      "spread_pct": 2.41,
-      "fetched_at": "2026-08-02 00:52"
+      "cbn_rate": 1562.0,
+      "spread": 38.02,
+      "spread_pct": 2.43,
+      "fetched_at": "2026-08-02 01:07"
     }
   }
 }
