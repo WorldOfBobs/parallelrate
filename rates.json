@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-11T00:43:40Z",
+  "updated_at": "2026-10-11T00:58:40Z",
   "rates": {
     "USD_NGN": {
       "foreign": "USD",
@@ -12,7 +12,7 @@
       "cbn_rate": 1331.0,
       "spread": 24.76,
       "spread_pct": 1.86,
-      "fetched_at": "2026-10-11 00:43"
+      "fetched_at": "2026-10-11 00:58"
     },
     "GBP_NGN": {
       "foreign": "GBP",
@@ -22,10 +22,10 @@
       "sym": "\u20a6",
       "parallel_label": "Parallel market",
       "parallel_rate": 1798.08,
-      "cbn_rate": 1770.46,
-      "spread": 27.62,
-      "spread_pct": 1.56,
-      "fetched_at": "2026-10-11 00:43"
+      "cbn_rate": 1768.2,
+      "spread": 29.88,
+      "spread_pct": 1.69,
+      "fetched_at": "2026-10-11 00:58"
     },
     "EUR_NGN": {
       "foreign": "EUR",
@@ -38,7 +38,7 @@
       "cbn_rate": 1499.42,
       "spread": 22.39,
       "spread_pct": 1.49,
-      "fetched_at": "2026-10-11 00:43"
+      "fetched_at": "2026-10-11 00:58"
     }
   }
 }
